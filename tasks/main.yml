@@ -6,7 +6,7 @@
 - name: Download Joplin {{ joplin_version }}
   get_url:
     url: https://github.com/laurent22/joplin/releases/download/v{{ joplin_version }}/Joplin-{{ joplin_version }}.AppImage
-    checksum: "sha256:{{ joplin_sha256 }}"
+    checksum: "sha512:{{ joplin_sha512 }}"
     dest: /opt/Joplin-{{ joplin_version }}.AppImage
     mode: "0755"
   when: not joplin_bin.stat.exists
